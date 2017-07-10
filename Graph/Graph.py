@@ -212,9 +212,11 @@ class TypedGraph(object):
         return self.edges.keys()
 
     def GetEdgeFromType(self, edgeType):
+		assert edgeType in self.edges
         return self.edges[edgeType].GetFromType()
 
     def GetEdgeToType(self, edgeType):
+		assert edgeType in self.edges
         return self.edges[edgeType].GetToType()
 
 
